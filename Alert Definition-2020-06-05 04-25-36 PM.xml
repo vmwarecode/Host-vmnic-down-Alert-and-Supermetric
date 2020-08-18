@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><alertContent>
+    <AlertDefinitions>
+        <AlertDefinition adapterKind="VMWARE" description="This alert will be triggered if one or more vmnic on a host are down. " disableInBasePolicy="true" id="AlertDefinition-27ba38d9-41aa-4227-9e26-2531c0620ea4" name="NG_Host vmmic down" resourceKind="HostSystem" subType="18" type="17">
+            <State severity="automatic">
+                <SymptomSet applyOn="self" operator="or">
+                    <Symptom ref="SymptomDefinition-93180bd9-f083-4f36-97d8-7841d117e4d0"/>
+                    <Symptom ref="SymptomDefinition-ccac56c0-ed53-4f01-a39d-0901dbc995fe"/>
+                    <Symptom ref="SymptomDefinition-2dfdd9d3-4d6b-49e8-b0ec-d763116bde46"/>
+                    <Symptom ref="SymptomDefinition-3019d2b4-a6d6-4c5e-acfa-82f33c1ca1db"/>
+                    <Symptom ref="SymptomDefinition-7422177b-c32b-449d-b52f-a26f294efb58"/>
+                    <Symptom ref="SymptomDefinition-2f5aa461-8ae5-4300-8ed1-72b1b83dad70"/>
+                </SymptomSet>
+                <Impact key="health" type="badge"/>
+            </State>
+        </AlertDefinition>
+    </AlertDefinitions>
+    <SymptomDefinitions>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-2dfdd9d3-4d6b-49e8-b0ec-d763116bde46" name="vmnic3 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_9e600e83-b349-4486-b62b-d58b001a3876" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-3019d2b4-a6d6-4c5e-acfa-82f33c1ca1db" name="vmnic2 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_1599f63d-da6c-493a-af54-4dbc958929db" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-ccac56c0-ed53-4f01-a39d-0901dbc995fe" name="vmnic4 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_cb23ad10-f9c4-4db0-85bb-fdb56389af77" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-93180bd9-f083-4f36-97d8-7841d117e4d0" name="vmnic5 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_59acfba6-2798-42e2-b22b-87e1805ed586" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-7422177b-c32b-449d-b52f-a26f294efb58" name="vmnic1 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_43718914-cf1e-42b1-9380-7e876be0ba3b" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="VMWARE" disableInBasePolicy="true" id="SymptomDefinition-2f5aa461-8ae5-4300-8ed1-72b1b83dad70" name="vmnic0 is down" resourceKind="HostSystem">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_dd635d02-d561-44ba-9d5a-f71c2bb97895" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+    </SymptomDefinitions>
+</alertContent>
